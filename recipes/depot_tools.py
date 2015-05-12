@@ -14,7 +14,7 @@ class DepotTools(recipe_util.Recipe):
 
   @staticmethod
   def fetch_spec(props):
-    url = 'https://chromium.googlesource.com/chromium/tools/depot_tools.git'
+    url = 'http://github.com/npe9/depot_tools.git',
     solution = {
         'name'        : 'depot_tools',
         'url'         : url,

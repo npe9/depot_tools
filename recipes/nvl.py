@@ -1,4 +1,4 @@
-# Copyright (c) 2013 The Chromium Authors. All rights reserved.
+# Copyright (c) 2015 The Hobbes Project. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
@@ -9,12 +9,12 @@ import recipe_util  # pylint: disable=F0401
 
 # This class doesn't need an __init__ method, so we disable the warning
 # pylint: disable=W0232
-class Chromium(recipe_util.Recipe):
-  """Basic Recipe class for Chromium."""
+class Nvl(recipe_util.Recipe):
+  """Basic Recipe class for the Nvl."""
 
   @staticmethod
   def fetch_spec(props):
-    url = 'https://chromium.googlesource.com/chromium/src.git'
+    url = 'https://github.com/npe9/nvl.git'
     solution = { 'name'   :'src',
                  'url'    : url,
                  'deps_file': '.DEPS.git',
@@ -42,8 +42,9 @@ class Chromium(recipe_util.Recipe):
 
 
 def main(argv=None):
-  return Chromium().handle_args(argv)
+  return Nvl().handle_args(argv)
 
 
 if __name__ == '__main__':
   sys.exit(main(sys.argv))
+
